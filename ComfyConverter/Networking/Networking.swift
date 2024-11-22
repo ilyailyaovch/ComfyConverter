@@ -8,22 +8,6 @@
 import Foundation
 import Combine
 
-/// Errors
-enum NetworkingError: LocalizedError {
-    
-    case badURLResponce(url: URL)
-    case unknown
-
-    var errorDescription: String? {
-        switch self {
-        case .badURLResponce(url: let url):
-            return "[🔥🔥🔥] Bad responce from URL: \(url)"
-        case .unknown:
-            return "[⚠️⚠️⚠️] Unknown error occured"
-        }
-    }
-}
-
 class Networking {
 
     static func download(url: URL) -> AnyPublisher<Data, any Error> {
@@ -47,7 +31,7 @@ class Networking {
         case .finished:
             break
         case .failure(let error):
-            print(error.localizedDescription)
+            debugPrint(error.localizedDescription)
         }
     }
 }
