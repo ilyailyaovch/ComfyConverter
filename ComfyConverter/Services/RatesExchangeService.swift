@@ -39,7 +39,7 @@ class RatesExchangeService: _RatesExchangeService {
     
     func getAllCurrencies() {
         guard let apiKey = Bundle.main.object(forInfoDictionaryKey: "API_KEY") as? String else { return }
-        let path = NetworkingURLHelper().createURLWithQueryParameter(
+        let path = NetworkingURLHelper.createURLWithQueryParameter(
             target: CurrencyEndpoints.currencies.path(),
             query: ["apiKey": apiKey]
         )

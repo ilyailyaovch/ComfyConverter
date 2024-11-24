@@ -107,8 +107,8 @@
 				095B254F2C14BC10003F3F42 /* UIComponents */,
 				095B25202C1488CA003F3F42 /* AppDelegate.swift */,
 				095B25222C1488CA003F3F42 /* SceneDelegate.swift */,
-				095B252E2C1488CB003F3F42 /* Info.plist */,
 				094AEC9F2CF37DCE00C73E36 /* ConfigToken.xcconfig */,
+				095B252E2C1488CB003F3F42 /* Info.plist */,
 			);
 			path = ComfyConverter;
 			sourceTree = "<group>";

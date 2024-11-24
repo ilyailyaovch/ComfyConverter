@@ -7,14 +7,14 @@
 
 import Foundation
 
-public final class NetworkingURLHelper {
+final class NetworkingURLHelper {
     
     public init() { }
     
     /// Создание строки URL с квери параметрами
     /// - query: квери параметры, которые нужно передать. Параметры могут содержать пробелы.
     /// - target: url в который вы хотите вставить исходный URL как параметр
-    public func createURLWithQueryParameter(target: String, query: [String : String]) -> String? {
+    static func createURLWithQueryParameter(target: String, query: [String : String]) -> String? {
         // URL-адрес, в который вы хотите вставить исходный URL как параметр
         var targetURLComponents = URLComponents(string: target)
         
