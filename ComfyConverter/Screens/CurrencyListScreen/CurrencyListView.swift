@@ -30,7 +30,7 @@ extension CurrencyListView {
             ForEach(viewModel.currencies, id: \.symbol) { val in
                 CurrencyButton(val)
                     .padding(.horizontal)
-                    .swipeActions { DeleteButton() }
+                    .swipeActions { DeleteButton(val) }
             }
             .onMove { viewModel.move(from: $0, to: $1) }
             .listRowSeparator(.hidden)
@@ -53,29 +53,26 @@ extension CurrencyListView {
                     .foregroundStyle(.ncAccentSecondary)
                     .font(.body)
             }
-           
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .buttonStyle(.plain)
-        .padding()
+        .padding(.horizontal)
         .background(.thinMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 
     /// Кнопка изменения
     private func EditListButton() -> some View {
-        Button {
-    
-        } label: {
-            Image(systemName: "trash")
-        }
-        .tint(.clear)
+        Image(systemName: "trash")
+            .tint(.clear)
     }
 
     /// Кнопка удаления
-    private func DeleteButton() -> some View {
+    private func DeleteButton(_ val: AvailableCurrency) -> some View {
         Button {
-            print("Delete")
+            withAnimation {
+                viewModel.currencies.removeAll(where: { $0.symbol == val.symbol })
+            }
         } label: {
             Image(systemName: "trash")
         }
