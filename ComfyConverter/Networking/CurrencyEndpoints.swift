@@ -9,9 +9,13 @@ import Foundation
 
 enum CurrencyEndpoints: String {
     case checkApi = "/client/checkapi"
-    case latest = "/client/latest"
+    case currencies = "/client/currencies"
     
-    func path() -> String {
-        return "https://api.ratesexchange.eu\(self.rawValue)"
+    func path(_ parameter: String? = nil) -> String {
+        if let parameter {
+            return "https://api.ratesexchange.eu\(self.rawValue)\(parameter)"
+        } else {
+            return "https://api.ratesexchange.eu\(self.rawValue)"
+        }
     }
 }

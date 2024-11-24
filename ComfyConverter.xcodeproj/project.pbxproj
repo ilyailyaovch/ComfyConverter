@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094AECA02CF37DCE00C73E36 /* ConfigToken.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 094AEC9F2CF37DCE00C73E36 /* ConfigToken.xcconfig */; };
+		094AECA22CF3837500C73E36 /* NetworkingURLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AECA12CF3837500C73E36 /* NetworkingURLHelper.swift */; };
+		094AECA42CF3852D00C73E36 /* AvailableCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094AECA32CF3852D00C73E36 /* AvailableCurrency.swift */; };
 		095B25212C1488CA003F3F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B25202C1488CA003F3F42 /* AppDelegate.swift */; };
 		095B25232C1488CA003F3F42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B25222C1488CA003F3F42 /* SceneDelegate.swift */; };
 		095B252A2C1488CB003F3F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 095B25292C1488CB003F3F42 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		094AEC9F2CF37DCE00C73E36 /* ConfigToken.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigToken.xcconfig; sourceTree = "<group>"; };
+		094AECA12CF3837500C73E36 /* NetworkingURLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingURLHelper.swift; sourceTree = "<group>"; };
+		094AECA32CF3852D00C73E36 /* AvailableCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableCurrency.swift; sourceTree = "<group>"; };
 		095B251D2C1488CA003F3F42 /* ComfyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComfyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		095B25202C1488CA003F3F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		095B25222C1488CA003F3F42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +108,7 @@
 				095B25202C1488CA003F3F42 /* AppDelegate.swift */,
 				095B25222C1488CA003F3F42 /* SceneDelegate.swift */,
 				095B252E2C1488CB003F3F42 /* Info.plist */,
+				094AEC9F2CF37DCE00C73E36 /* ConfigToken.xcconfig */,
 			);
 			path = ComfyConverter;
 			sourceTree = "<group>";
@@ -202,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				097A43982CF340500060EE69 /* APIStatus.swift */,
+				094AECA32CF3852D00C73E36 /* AvailableCurrency.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,6 +219,7 @@
 			children = (
 				095B255D2C159C15003F3F42 /* Networking.swift */,
 				097A43862CF105570060EE69 /* NetworkingError.swift */,
+				094AECA12CF3837500C73E36 /* NetworkingURLHelper.swift */,
 				097A43962CF321A60060EE69 /* CurrencyEndpoints.swift */,
 			);
 			path = Networking;
@@ -296,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				094AECA02CF37DCE00C73E36 /* ConfigToken.xcconfig in Resources */,
 				095B252A2C1488CB003F3F42 /* Assets.xcassets in Resources */,
 				095B252D2C1488CB003F3F42 /* Base in Resources */,
 			);
@@ -311,6 +321,7 @@
 				095B25372C148BD6003F3F42 /* _AppCoordinator.swift in Sources */,
 				095B253F2C148D37003F3F42 /* CurrencyListViewModel.swift in Sources */,
 				095B25672C15A31D003F3F42 /* CurrencyWebImage.swift in Sources */,
+				094AECA22CF3837500C73E36 /* NetworkingURLHelper.swift in Sources */,
 				095B25422C148FC5003F3F42 /* CurrencyDetailsView.swift in Sources */,
 				097A43872CF105570060EE69 /* NetworkingError.swift in Sources */,
 				095B255E2C159C15003F3F42 /* Networking.swift in Sources */,
@@ -320,6 +331,7 @@
 				095B25442C1493F9003F3F42 /* CurrencyDetailsView_2.swift in Sources */,
 				095B25392C148C35003F3F42 /* AppCoordinator.swift in Sources */,
 				095B25212C1488CA003F3F42 /* AppDelegate.swift in Sources */,
+				094AECA42CF3852D00C73E36 /* AvailableCurrency.swift in Sources */,
 				097A43952CF106140060EE69 /* MeshGradientBorders.swift in Sources */,
 				095B253D2C148D26003F3F42 /* CurrencyListView.swift in Sources */,
 				097A43972CF321A60060EE69 /* CurrencyEndpoints.swift in Sources */,
@@ -467,6 +479,7 @@
 		};
 		095B25322C1488CB003F3F42 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 094AEC9F2CF37DCE00C73E36 /* ConfigToken.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -495,6 +508,7 @@
 		};
 		095B25332C1488CB003F3F42 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 094AEC9F2CF37DCE00C73E36 /* ConfigToken.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

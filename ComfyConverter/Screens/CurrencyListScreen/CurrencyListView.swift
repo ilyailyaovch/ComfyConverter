@@ -16,7 +16,7 @@ struct CurrencyListView: View {
     
     var body: some View {
         NavigationStack {
-            CurrencyList(viewModel.codes)
+            CurrencyList()
                 .toolbar { EditButton() }
         }
     }
@@ -25,12 +25,12 @@ struct CurrencyListView: View {
 extension CurrencyListView {
     
     /// Список валют
-    private func CurrencyList(_ vals: [String]) -> some View {
+    private func CurrencyList() -> some View {
         List {
-            ForEach(vals, id: \.self) { val in
+            ForEach(viewModel.currencies, id: \.symbol) { val in
                 CurrencyButton(val)
                     .padding(.horizontal)
-                    .swipeActions { DeleteButton(val) }
+                    .swipeActions { DeleteButton() }
             }
             .onMove { viewModel.move(from: $0, to: $1) }
             .listRowSeparator(.hidden)
@@ -43,11 +43,17 @@ extension CurrencyListView {
     }
 
     /// Строка валюты
-    private func CurrencyButton(_ val: String) -> some View {
+    private func CurrencyButton(_ val: AvailableCurrency) -> some View {
         Button {
-            viewModel.selectItem(val)
+            viewModel.selectItem(val.description)
         } label: {
-            CurrencyWebImage(code: val)
+            HStack(alignment: .center, spacing: 16) {
+                CurrencyWebImage(code: val.symbol)
+                Text(val.description)
+                    .foregroundStyle(.ncAccentSecondary)
+                    .font(.body)
+            }
+           
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .buttonStyle(.plain)
@@ -67,9 +73,9 @@ extension CurrencyListView {
     }
 
     /// Кнопка удаления
-    private func DeleteButton(_ val: String) -> some View {
+    private func DeleteButton() -> some View {
         Button {
-            print("Delete \(val)")
+            print("Delete")
         } label: {
             Image(systemName: "trash")
         }

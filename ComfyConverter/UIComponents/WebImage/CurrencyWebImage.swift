@@ -31,5 +31,5 @@ struct CurrencyWebImage: View {
 }
 
 #Preview {
-    CurrencyWebImage(code: "gbp")
+    CurrencyWebImage(code: "CAD")
 }
