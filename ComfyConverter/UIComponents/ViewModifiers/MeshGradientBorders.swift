@@ -96,7 +96,4 @@ extension View {
             .frame(width: 200, height: 45)
             .meshGradientBorders(isActive: true, cornerRadius: 16)
     }
-    
-    
- 
 }

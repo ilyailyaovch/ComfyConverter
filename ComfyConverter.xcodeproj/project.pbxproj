@@ -23,12 +23,14 @@
 		095B254E2C14A42B003F3F42 /* CurrencyDetailsViewModel_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B254D2C14A42B003F3F42 /* CurrencyDetailsViewModel_3.swift */; };
 		095B25512C14BC3B003F3F42 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B25502C14BC3B003F3F42 /* BackgroundColor.swift */; };
 		095B25552C14BD8A003F3F42 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B25542C14BD8A003F3F42 /* Colors.swift */; };
-		095B255C2C1597B7003F3F42 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B255B2C1597B7003F3F42 /* Currency.swift */; };
 		095B255E2C159C15003F3F42 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B255D2C159C15003F3F42 /* Networking.swift */; };
 		095B25642C159F0C003F3F42 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 095B25632C159F0C003F3F42 /* SDWebImageSwiftUI */; };
 		095B25672C15A31D003F3F42 /* CurrencyWebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B25662C15A31D003F3F42 /* CurrencyWebImage.swift */; };
 		097A43872CF105570060EE69 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A43862CF105570060EE69 /* NetworkingError.swift */; };
 		097A43952CF106140060EE69 /* MeshGradientBorders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A43942CF106140060EE69 /* MeshGradientBorders.swift */; };
+		097A43972CF321A60060EE69 /* CurrencyEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A43962CF321A60060EE69 /* CurrencyEndpoints.swift */; };
+		097A43992CF340500060EE69 /* APIStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A43982CF340500060EE69 /* APIStatus.swift */; };
+		097A43A02CF34CC70060EE69 /* RatesExchangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A439F2CF34CC70060EE69 /* RatesExchangeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,11 +52,13 @@
 		095B254D2C14A42B003F3F42 /* CurrencyDetailsViewModel_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailsViewModel_3.swift; sourceTree = "<group>"; };
 		095B25502C14BC3B003F3F42 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		095B25542C14BD8A003F3F42 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		095B255B2C1597B7003F3F42 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		095B255D2C159C15003F3F42 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		095B25662C15A31D003F3F42 /* CurrencyWebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyWebImage.swift; sourceTree = "<group>"; };
 		097A43862CF105570060EE69 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		097A43942CF106140060EE69 /* MeshGradientBorders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshGradientBorders.swift; sourceTree = "<group>"; };
+		097A43962CF321A60060EE69 /* CurrencyEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyEndpoints.swift; sourceTree = "<group>"; };
+		097A43982CF340500060EE69 /* APIStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStatus.swift; sourceTree = "<group>"; };
+		097A439F2CF34CC70060EE69 /* RatesExchangeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesExchangeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			children = (
 				095B25562C15956F003F3F42 /* Models */,
 				095B253A2C148CD5003F3F42 /* Screens */,
+				097A43A12CF34CD00060EE69 /* Services */,
 				095B25572C159598003F3F42 /* Networking */,
 				095B25342C148B23003F3F42 /* Resources */,
 				095B25352C148BA7003F3F42 /* Coordinators */,
@@ -196,7 +201,7 @@
 		095B25562C15956F003F3F42 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				095B255B2C1597B7003F3F42 /* Currency.swift */,
+				097A43982CF340500060EE69 /* APIStatus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 			children = (
 				095B255D2C159C15003F3F42 /* Networking.swift */,
 				097A43862CF105570060EE69 /* NetworkingError.swift */,
+				097A43962CF321A60060EE69 /* CurrencyEndpoints.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -216,6 +222,14 @@
 				095B25662C15A31D003F3F42 /* CurrencyWebImage.swift */,
 			);
 			path = WebImage;
+			sourceTree = "<group>";
+		};
+		097A43A12CF34CD00060EE69 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				097A439F2CF34CC70060EE69 /* RatesExchangeService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,13 +316,15 @@
 				095B255E2C159C15003F3F42 /* Networking.swift in Sources */,
 				095B25552C14BD8A003F3F42 /* Colors.swift in Sources */,
 				095B25462C1494B2003F3F42 /* CurrencyDetailsViewModel.swift in Sources */,
+				097A43992CF340500060EE69 /* APIStatus.swift in Sources */,
 				095B25442C1493F9003F3F42 /* CurrencyDetailsView_2.swift in Sources */,
-				095B255C2C1597B7003F3F42 /* Currency.swift in Sources */,
 				095B25392C148C35003F3F42 /* AppCoordinator.swift in Sources */,
 				095B25212C1488CA003F3F42 /* AppDelegate.swift in Sources */,
 				097A43952CF106140060EE69 /* MeshGradientBorders.swift in Sources */,
 				095B253D2C148D26003F3F42 /* CurrencyListView.swift in Sources */,
+				097A43972CF321A60060EE69 /* CurrencyEndpoints.swift in Sources */,
 				095B254E2C14A42B003F3F42 /* CurrencyDetailsViewModel_3.swift in Sources */,
+				097A43A02CF34CC70060EE69 /* RatesExchangeService.swift in Sources */,
 				095B25482C149951003F3F42 /* CurrencyDetailsView_3.swift in Sources */,
 				095B25512C14BC3B003F3F42 /* BackgroundColor.swift in Sources */,
 				095B254C2C149EFA003F3F42 /* CurrencyDetailsViewModel_2.swift in Sources */,
